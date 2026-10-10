@@ -16,7 +16,7 @@ const chiefComplaint = document.getElementById("chiefComplaint");
 const API_URL =
     ["localhost", "127.0.0.1", ""].includes(location.hostname)
         ? "http://localhost:8000"
-        : "https://YOUR-BACKEND-NAME.onrender.com";
+        : "https://caseease-8zgn.onrender.com";
 
 const typing = document.getElementById("typing");
 const apiError = document.getElementById("apiError");
