@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CaseEase</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background: #f5f7fb;
+      }
+
+      /* Navbar */
+
+      nav {
+        width: 100%;
+        height: 70px;
+        background: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 60px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        font-size: 30px;
+        font-weight: bold;
+        color: #1e40af;
+      }
+
+      .search input {
+        width: 300px;
+        padding: 10px 15px;
+        border-radius: 30px;
+        border: 1px solid #ddd;
+        outline: none;
+        transition: 0.3s;
+      }
+
+      .search input:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 8px rgba(37, 99, 235, 0.3);
+      }
+
+      .menu {
+        display: flex;
+        gap: 18px;
+      }
+
+      .menu button {
+        padding: 10px 22px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        background: #2563eb;
+        color: white;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .menu button:hover {
+        background: #1d4ed8;
+        transform: translateY(-2px);
+      }
+
+      /* Hero */
+
+      .hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 80px;
+      }
+
+      .content {
+        width: 50%;
+      }
+
+      .content h1 {
+        font-size: 50px;
+        color: #1e3a8a;
+        margin-bottom: 20px;
+      }
+
+      .content p {
+        font-size: 18px;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+
+      .content button {
+        padding: 14px 30px;
+        background: #2563eb;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        font-size: 17px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .content button:hover {
+        background: #1d4ed8;
+      }
+
+      .card {
+        width: 380px;
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .card h2 {
+        color: #1e3a8a;
+        margin-bottom: 20px;
+      }
+
+      .card input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+      }
+
+      .card button {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        background: #2563eb;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      body {
+        background: #f5f7fb;
+        color: black;
+        transition: 0.3s;
+      }
+      /* Toggle Switch */
+
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+
+      .switch input {
+        display: none;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        inset: 0;
+        background-color: #0000005b;
+        transition: 0.4s;
+        border-radius: 34px;
+      }
+
+      .slider::before {
+        content: "";
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: hsl(0, 100%, 100%);
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+
+      input:checked + .slider {
+        background-color: rgb(255, 255, 255);
+      }
+
+      input:checked + .slider::before {
+        background-color: black;
+        transform: translateX(26px);
+      }
+      /* ========== DARK MODE ========== */
+
+      body.dark {
+        background: #121212;
+        color: #f5f5f5;
+        transition: 0.3s;
+      }
+
+      /* Navbar */
+      body.dark nav {
+        background: #1b1b1b;
+        box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+      }
+
+      /* Logo */
+      body.dark .logo {
+        color: #60a5fa;
+      }
+
+      /* Search Bar */
+      body.dark .search input {
+        background: #03030350;
+        color: white;
+        border: 0.2px solid rgba(255, 255, 255, 0.315);
+      }
+      body.dark .search input:hover {
+        background: #fcfcfc50;
+        color: rgb(252, 251, 251);
+        border: 0.2px solid #ffffff1c;
+      }
+
+      body.dark .search input::placeholder {
+        color: #bdbdbd;
+      }
+
+      /* Navigation Buttons */
+      body.dark .menu button {
+        background: #3b82f6;
+        color: white;
+      }
+
+      body.dark .menu button:hover {
+        background: #2563eb;
+      }
+
+      /* Hero Text */
+      body.dark .content h1 {
+        color: #93c5fd;
+      }
+
+      body.dark .content p {
+        color: #d1d5db;
+      }
+
+      /* Hero Button */
+      body.dark .content button {
+        background: #3b82f6;
+      }
+
+      body.dark .content button:hover {
+        background: #2563eb;
+      }
+
+      /* Card */
+      body.dark .card {
+        background: #1f1f1f;
+        color: white;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+      }
+
+      body.dark .card h2 {
+        color: #93c5fd;
+      }
+
+      /* Card Inputs */
+      body.dark .card input {
+        background: #2b2b2b;
+        color: white;
+        border: 1px solid #555;
+      }
+      body.dark .card input:hover {
+        background: #fcfcfc50;
+        color: rgb(252, 251, 251);
+        border: 1px solid #555;
+      }
+
+      body.dark .card input::placeholder {
+        color: #bdbdbd;
+      }
+
+      /* Card Button */
+      body.dark .card button {
+        background: #3b82f6;
+      }
+
+      body.dark .card button:hover {
+        background: #2563eb;
+      }
+
+      /* Toggle Switch */
+      body.dark .slider {
+        background: #4b5563;
+      }
+
+      body.dark input:checked + .slider {
+        background: #3b82f6;
+      }
+
+      body.dark input:checked + .slider::before {
+        background: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="logo">CaseEase</div>
+
+      <div class="search">
+        <input type="search" placeholder="Search patient..." />
+      </div>
+
+      <div class="menu">
+        <button>Home</button>
+        <button>About</button>
+        <button>Services</button>
+        <button>Contact</button>
+        <button>Login</button>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="themeToggle" />
+        <span class="slider"></span>
+      </label>
+    </nav>
+
+    <section class="hero">
+      <div class="content">
+        <h1>Smart Patient Case Taking</h1>
+
+        <p>
+          Simplify patient history collection with a clean, modern, and
+          efficient interface designed for doctors and medical students.
+        </p>
+
+        <button>Get Started</button>
+      </div>
+
+      <div class="card">
+        <h2>Quick Patient Entry</h2>
+        <form onsubmit="savePatientData(event)">
+          <input
+            type="text"
+            placeholder="Patient Name"
+            id="patient_name"
+            required
+          />
+          <input type="number" placeholder="Age" id="patient_age" required />
+          <input
+            type="text"
+            placeholder="Gender"
+            id="patient_gender"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Chief Complaint"
+            id="patient_chief_complaint"
+            required
+          />
+          <button type="submit" onsubmit="savePatientData(event)">Start Case</button>
+        </form>
+      </div>
+    </section>
+
+    <script src = "script.js"></script>
+  </body>
+</html>
