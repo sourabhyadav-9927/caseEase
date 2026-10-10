@@ -254,7 +254,7 @@ function endCase() {
     if (confirmEnd) {
 
         // Go back to home page
-        window.location.href = "index.html";
+        window.location.href = "case.html";
     }
 }
 
